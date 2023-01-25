@@ -46,6 +46,7 @@ h1 {
   justify-content: flex-end;
   cursor: pointer;
   display: none;
+  z-index: 2000;
 }
 
 .icon span {
@@ -102,9 +103,9 @@ span:last-child {
     right: 5px;
     top: 40px;
   }
-  .page__header.active-nav .links ul {
+  /* .page__header.active-nav .links ul {
 display: block;
-  }
+  } */
   .page__header.active-nav div {
     display: none;
   }

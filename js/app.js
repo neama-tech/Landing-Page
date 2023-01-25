@@ -153,11 +153,14 @@ let sections = document.querySelectorAll("section");
   navUl.append(fragment);
 
 //Responsive navbar
-let icon = document.querySelector(".icon")
+let icon = document.querySelector("span.icon")
 let header = document.querySelector(".page__header");
-icon.addEventListener("click", (e) => {
-    header.classList.toggle("active-nav");
-})
+function activateNav(e) {
+  header.classList.toggle("active-nav");
+}
+icon.addEventListener("click", activateNav);
+activateNav();
+
 // Add class 'active' to section when near top of viewport
 // Add class 'active' to navigation items when a section is in the viewport
 
@@ -212,7 +215,10 @@ function isScrolling() {
   if (pos1 <= 100) {
     document.querySelector("nav").style.display = "flex";
   ///
-  }else if (pos2 === pos1) {
+  } else if (pos2 === pos1) {
+    //for responsive if the icon is clicked display navlist else in all media hide
+    header.classList.contains("active-nav") ?
+      document.querySelector("nav").style.display = "flex":
     document.querySelector("nav").style.display = "none";
   } else {
     document.querySelector("nav").style.display = "flex";
