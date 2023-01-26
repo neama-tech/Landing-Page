@@ -21,4 +21,4 @@ collapsible sections.
 
 ## Copyright
 
-:Copyright: Udacity modified by Neama Ramadan
+&copy; Udacity modified by Neama Ramadan
